@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+:root{
+    --primary-color: #17a2b8;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 50vh;
+   font-family: "Poppins";
+    background-image: linear-gradient(to right, #333,#ffa400);
+}
+.card{
+    margin: 120px auto;
+    width: 320px;
+    height: 380px;
+    background-color: #365766;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+}
+.card-heart, .card-cart{
+    font-size: 25px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+.card-heart{
+    cursor: pointer;
+}
+.card-cart{
+    left: unset;
+    right: 15px;
+}
+.card-image {
+    width: 151px;
+    margin-left: 31px;
+    transition: 0.5s;
+    zoom: 1.5;
+}
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-title, .card-price{
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+.card-title, .card-price{
+    transition: 0.5s;
+}
+.card-title {
+    color: var(--primary-color);
+}
+.card-size, .card-color{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.card-size span{
+    padding: 1px 10px;
+    background: #dedede;
+    color: black;
+    font-weight: bold;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+.card-color span{
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+}
+.card--color-red{
+    background: red;
+}
+.card--color-green{
+    background: chartreuse;
+}
+.card--color-blue{
+    background:#17a2b8 ;
+}
+.card-action button{
+    background: var(--primary-color) ;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 46px;
+    cursor: pointer;
+}
+.card-action button:hover{
+    transform: scale(0.9);
+}
+.card-heart :hover{
+    transform: scale(0.9);
+}
+.card-cart :hover{
+    transform: scale(0.9);
+
+}
+.card:hover .card-image{
+    transform: translateY(-90px) rotate(-20deg);
+}
+.card:hover .card-title{
+    transform: translate(-50px, -103px);
+}
+.card:hover .card-price{
+    transform: translate(-118px, -91px);
+}
+.card-size{
+    margin-top: 150px;
+}
+.card-size, .card-color, .card-action{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+    transition-delay: 0.3s;
+}
+.card:hover .card-action,
+.card:hover .card-color,
+.card:hover .card-size {
+    visibility: visible;
+    opacity: 100;
+}
+.card:hover .card-size{
+    margin-top: -78px;
+}
